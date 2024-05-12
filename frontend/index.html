@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Healthcare</title>
+    <style>
+        /* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    display: inline-block;
+}
+
+nav ul {
+    list-style-type: none;
+    display: inline-block;
+    justify-content: center;
+    margin-left:500px;
+    
+}
+
+
+nav ul li {
+    display: inline-block;
+    margin-left:100px;
+}
+
+nav ul button {
+    padding: 5px;
+    text-decoration:none;
+    color: aliceblue;
+    margin-right: 20px ;
+    font-size: 20px;
+    background-color: rgb(5, 148, 251);
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+.logo {
+    border-radius: 20px;
+     
+    width: 60px; /* Adjust as needed */
+    height: auto;
+    display:inline-block;
+    
+}
+
+footer{
+    margin-top:200px;
+    background-color: #333;
+    margin-bottom:60px;
+    
+}
+ 
+footer ul{
+    
+    border-radius:20px;
+    
+}
+
+
+footer ul button{
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 20px !important;
+    margin-top: 20px !important;
+    margin-left: 40px !important;
+}
+
+body main ul{
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top:60px;
+    font-size:20px;
+}
+main #car img{
+    width: 70%;
+    height: auto;
+}
+#car {
+    position: absolute;
+    bottom: 66px; /* Initial position */
+    left: 0; /* Initial position */
+    width: 20%; /* Adjust as per your image */
+    height: 20%; /* Adjust as per your image */
+    
+    background-size: cover;
+}
+#logo , #name , #butt {
+    display:inline-block;
+}
+#name{
+    padding: 30px;
+}
+.appointment , .emergency, .medicine{
+    border: 2px solid gray;
+    background-color: lightgrey;
+    border-radius: 7px;
+    padding: 20px 30px 20px 30px;
+    margin-top: 80px;
+    margin-right: 80px;
+    margin-left: 80px;
+    
+}
+.appointment img , .emergency img, .medicine img{
+    border-radius:50px;
+}
+
+.appointment, .emergency, .medicine{
+    display: inline-block;
+    
+}
+header{
+    background-color: aliceblue;
+    border-radius: 50px;
+}
+ref{
+    display:block;
+    text-align: center;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <img src="logo.webp"  class="logo"> 
+        </div>
+        <div id="name">
+            <h1>EmergencyCare Connect</h1>
+        </div>
+            <nav id="butt">
+                <ul>
+                <button>Home</button>
+                <button>Emergency</button>
+                <button>Login</button>
+                <button>Medicine</button>
+                </ul>
+            </nav>
+    </header>
+    <main>
+        <ref>
+        <div class="appointment">
+            <img src="Appointment.jpeg" alt="">
+            <h3>Online appointment</h3>
+        </div>
+        <div class="emergency">
+            <img src="emergency.jpeg" alt="">
+            <h3>Emergency</h3>
+        </div>
+        <div class="medicine">
+            <img src="pharmacy.jpeg" alt="">
+            <h3>Pharmacy</h3>
+        </div>
+    </ref>
+        <div id="car">
+            <img src="Ambulance1.webp" alt="">
+        </div>    
+    </main>
+    <footer>
+        <ul>
+            <button>About us</button>
+            <button>Services offered</button>
+            <button>Covid 19 updates</button>
+            <button>Social Media</button>
+            <button>Health Assessment Tools</button>
+            <button>Health Tips/Blog</button>
+            <button>Insurance Info</button>
+            
+        </ul>
+        
+    </footer>
+    <script >
+var car = document.getElementById('car');
+var position = 0;
+function moveCar() {
+    position += 3; 
+    if(position>1250){
+        position=0;
+    }
+    car.style.left = position + 'px';
+    requestAnimationFrame(moveCar);
+}
+
+// Start the animation
+moveCar();
+
+    </script>
+
+</body>
+</html>
